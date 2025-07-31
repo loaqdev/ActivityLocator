@@ -18,7 +18,7 @@ builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 
 var app = builder.Build();
 
-app.UseCors(options => options.AllowAnyHeader().AllowAnyOrigin()
+app.UseCors(options => options.AllowAnyHeader().AllowAnyMethod()
     .WithOrigins("http://localhost:3000", "https://localhost:3000"));
 
 app.MapControllers();

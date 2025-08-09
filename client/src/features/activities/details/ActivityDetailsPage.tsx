@@ -6,7 +6,7 @@ import ActivityDetailsInfo from "./ActivityDetailsInfo";
 import ActivityDetailsChat from "./ActivityDetailsChat";
 import ActivityDetailsSidebar from "./ActivityDetailsSidebar";
 
-export default function ActivityDetailPage() {
+export default function ActivityDetailsPage() {
   const { id } = useParams();
   const { activity, isLoadingActivity } = useActivities(id);
 

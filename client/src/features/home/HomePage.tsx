@@ -4,18 +4,17 @@ import { Link } from "react-router";
 
 export default function HomePage() {
     return (
-        <Paper
-            sx={{
-                color: "white",
-                display: "flex",
-                flexDirection: "column",
-                gap: 6,
-                alignItems: "center",
-                alignContent: "center",
-                justifyContent: "center",
-                height: "100vh",
-                backgroundImage: 'linear-gradient(135deg, #4b6cb7 0%, #182848 70%)'
-            }}
+        <Paper sx={{
+            color: "white",
+            display: "flex",
+            flexDirection: "column",
+            gap: 6,
+            alignItems: "center",
+            alignContent: "center",
+            justifyContent: "center",
+            height: "100vh",
+            backgroundImage: 'linear-gradient(135deg, #4b6cb7 0%, #182848 70%)'
+        }}
         >
             <Box sx={{
                 display: "flex",
@@ -38,7 +37,11 @@ export default function HomePage() {
                 to="/activities"
                 size="large"
                 variant="contained"
-                sx={{ height: 80, borderRadius: 4, fontSize: "1.5rem" }}
+                sx={{
+                    height: 80,
+                    borderRadius: 4,
+                    fontSize: "1.5rem"
+                }}
             >
                 Take me to the activities
             </Button>

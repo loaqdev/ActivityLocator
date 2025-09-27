@@ -15,7 +15,7 @@ export const useActivities = (id?: string) => {
         enabled: !id && location.pathname === '/activities'
     });
 
-    const { data: activity, isLoading: isLoadingActivity } = useQuery({
+    const {data: activity, isLoading: isLoadingActivity} = useQuery({
         queryKey: ['activities', id],
         queryFn: async () => {
             const response = await agent.get<Activity>(`/activities/${id}`);
@@ -45,18 +45,18 @@ export const useActivities = (id?: string) => {
                 queryKey: ['activities']
             })
         }
-    })
+    });
 
     const deleteActivity = useMutation({
         mutationFn: async (id: string) => {
-            await agent.delete(`/activities${id}`)
+            await agent.delete(`/activities/${id}`)
         },
         onSuccess: async () => {
             await queryClient.invalidateQueries({
                 queryKey: ['activities']
             })
         }
-    })
+    });
 
     return {
         activities,
